@@ -3,7 +3,7 @@ name = "website"
 version = "0.1.0"
 edition = "2024"
 authors = ["Hussard Group"]
-description = "Hussard — Apple-grade landing page. Full Rust / WASM."
+description = "Hussard - Premium landing page. Full Rust / WASM."
 
 [dependencies]
 leptos = { version = "0.8.19", features = ["csr"] }
