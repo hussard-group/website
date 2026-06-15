@@ -257,9 +257,9 @@ body {
 /* ===== Hero media ===== */
 .hero-media {
     width: 100%;
-    max-width: 1024px;
-    margin: 3rem auto 0;
-    padding: 0 clamp(1.5rem, 5vw, 3rem);
+    max-width: 1100px;
+    margin: 5rem auto 0;
+    padding: 0 clamp(1rem, 4vw, 2.5rem);
 }
 
 .hero-img {
@@ -276,7 +276,7 @@ body {
 .synaptic-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 6rem;
     align-items: center;
 }
 
@@ -312,15 +312,15 @@ body {
 
 /* ===== Showcase (Full-bleed) ===== */
 .showcase {
-    padding: var(--space-2xl) 0;
+    padding: var(--space-xl) 0;
     background: var(--bg-elevated);
     border-top: 1px solid var(--border);
 }
 
 .showcase-inner {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 clamp(1.5rem, 5vw, 3rem);
+    padding: 0 clamp(0.75rem, 3vw, 2rem);
 }
 
 .showcase-img {
@@ -329,7 +329,7 @@ body {
 
 /* ===== Manifesto (Sub-light) ===== */
 .manifesto {
-    padding: var(--space-2xl) 0;
+    padding: calc(var(--space-2xl) * 1.1) 0;
     background: var(--bg-elevated);
     border-top: 1px solid var(--border);
 }
@@ -350,7 +350,7 @@ body {
 
 /* ===== Values (Sub-dark) ===== */
 .values {
-    padding: var(--space-2xl) 0;
+    padding: calc(var(--space-2xl) * 1.15) 0;
     background: var(--bg-dark);
     border-top: 1px solid var(--border-inverse);
 }
@@ -390,7 +390,7 @@ body {
 .pillars {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .pillar {
@@ -454,7 +454,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    padding: 1.5rem 2rem;
+    padding: 2.5rem 2.5rem;
     background: var(--bg);
     transition: background 0.4s var(--ease-out-quart);
 }
@@ -482,7 +482,7 @@ body {
 
 /* ===== CTA (Light with subtle glow) ===== */
 .cta {
-    padding: var(--space-2xl) 0;
+    padding: calc(var(--space-2xl) * 1.2) 0;
     text-align: center;
     background:
         radial-gradient(ellipse 50% 30% at 50% 100%, rgba(255, 122, 61, 0.06), transparent 60%),
