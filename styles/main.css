@@ -244,11 +244,34 @@ body {
     color: var(--text);
 }
 
-/* ===== Expertise (White / Light) ===== */
-.expertise {
+/* ===== Values (Sub-dark) ===== */
+.values {
     padding: var(--space-2xl) 0;
-    background: var(--bg);
-    border-top: 1px solid var(--border);
+    background: var(--bg-dark);
+    border-top: 1px solid var(--border-inverse);
+}
+
+.values .section-label {
+    color: var(--text-secondary);
+}
+
+.values .pillar--inverse {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: var(--border-inverse);
+}
+
+.values .pillar--inverse:hover {
+    border-color: rgba(255, 122, 61, 0.35);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.values .pillar-title {
+    color: var(--text-inverse);
+}
+
+.values .pillar-desc {
+    color: var(--text-secondary);
 }
 
 .section-label {
@@ -307,50 +330,45 @@ body {
     line-height: 1.55;
 }
 
-/* ===== Stack (Sub-dark) ===== */
-.stack {
+/* ===== Philosophy (Light) ===== */
+.philosophy {
     padding: var(--space-2xl) 0;
-    background: var(--bg-dark);
-    border-top: 1px solid var(--border-inverse);
-    color: var(--text-inverse);
+    background: var(--bg);
+    border-top: 1px solid var(--border);
 }
 
-.stack .section-label {
-    color: var(--text-secondary);
-}
-
-.stack-grid {
+.philosophy-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1px;
-    background: var(--border-inverse);
+    background: var(--border);
     border-radius: var(--radius);
     overflow: hidden;
 }
 
-.stack-item {
+.philosophy-item {
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
     padding: 1.5rem 2rem;
-    background: var(--bg-dark);
+    background: var(--bg);
     transition: background 0.4s var(--ease-out-quart);
 }
 
-.stack-item:hover {
-    background: rgba(255, 255, 255, 0.04);
+.philosophy-item:hover {
+    background: var(--bg-surface);
 }
 
-.stack-name {
+.philosophy-name {
     font-size: 1.05rem;
     font-weight: 600;
-    color: var(--text-inverse);
+    color: var(--text);
     letter-spacing: -0.01em;
 }
 
-.stack-role {
+.philosophy-role {
     font-size: 0.85rem;
-    color: var(--text-secondary);
+    color: var(--text-tertiary);
 }
 
 /* ===== CTA (Light with subtle glow) ===== */
@@ -416,7 +434,7 @@ body {
         padding-top: 6rem;
     }
 
-    .stack-grid {
+    .philosophy-grid {
         grid-template-columns: 1fr;
     }
 

@@ -11,10 +11,10 @@ pub fn Home() -> impl IntoView {
             <div class="hero-content">
                 <h1 class="hero-title">"Hussard"</h1>
                 <p class="hero-subtitle">
-                    "On construit l'avenir en Rust."
+                    "Groupe de développement au service des entreprises"
                 </p>
                 <p class="hero-cta">
-                    "Groupe de développement haute performance."
+                    "fortes d'innovation."
                 </p>
             </div>
             <div class="scroll-hint">
@@ -27,52 +27,52 @@ pub fn Home() -> impl IntoView {
             <div class="container">
                 <ScrollReveal>
                     <h2 class="manifesto-text">
-                        "Nous croyons que le logiciel de demain doit être "
-                        <em>"rapide"</em>
+                        "Nous croyons que les entreprises qui osent innover méritent des partenaires "
+                        <em>"audacieux"</em>
                         ", "
-                        <em>"sûr"</em>
+                        <em>"indépendants"</em>
                         " et "
-                        <em>"élégant"</em>
-                        ". C'est pourquoi nous codons en Rust et livrons du WebAssembly natif."
+                        <em>"rigoureux"</em>
+                        ". C'est dans cette alliance que se construisent les projets d'exception."
                     </h2>
                 </ScrollReveal>
             </div>
         </section>
 
-        // ===== EXPERTISE =====
-        <section class="expertise">
+        // ===== VALEURS (sub-dark) =====
+        <section class="values">
             <div class="container">
                 <ScrollReveal>
-                    <h3 class="section-label">"Notre expertise"</h3>
+                    <h3 class="section-label">"Nos valeurs"</h3>
                 </ScrollReveal>
 
                 <div class="pillars">
                     <ScrollReveal delay_ms=100>
-                        <div class="pillar">
+                        <div class="pillar pillar--inverse">
                             <span class="pillar-number">"01"</span>
-                            <h4 class="pillar-title">"Rust natif"</h4>
+                            <h4 class="pillar-title">"Audace"</h4>
                             <p class="pillar-desc">
-                                "Typage fort, zéro overhead, mémoire sécurisée sans garbage collector."
+                                "Nous repoussons les limites. Chaque projet est une opportunité d'explorer l'inconnu et de créer ce qui n'existe pas encore."
                             </p>
                         </div>
                     </ScrollReveal>
 
                     <ScrollReveal delay_ms=200>
-                        <div class="pillar">
+                        <div class="pillar pillar--inverse">
                             <span class="pillar-number">"02"</span>
-                            <h4 class="pillar-title">"WebAssembly"</h4>
+                            <h4 class="pillar-title">"Indépendance"</h4>
                             <p class="pillar-desc">
-                                "Bytecode binaire exécuté à vitesse native dans le navigateur."
+                                "Pas de dépendance aux stacks legacy. Nous choisissons les meilleures technologies — et les maîtrisons de bout en bout."
                             </p>
                         </div>
                     </ScrollReveal>
 
                     <ScrollReveal delay_ms=300>
-                        <div class="pillar">
+                        <div class="pillar pillar--inverse">
                             <span class="pillar-number">"03"</span>
-                            <h4 class="pillar-title">"Performance"</h4>
+                            <h4 class="pillar-title">"Rigueur"</h4>
                             <p class="pillar-desc">
-                                "Optimisations LTO, link-time, panic=abort. Chaque octet compte."
+                                "Typage fort, zéro overhead, mémoire sécurisée. Chaque ligne de code est pensée, chaque octet compte."
                             </p>
                         </div>
                     </ScrollReveal>
@@ -80,30 +80,30 @@ pub fn Home() -> impl IntoView {
             </div>
         </section>
 
-        // ===== STACK =====
-        <section class="stack">
+        // ===== PHILOSOPHIE (light) =====
+        <section class="philosophy">
             <div class="container">
                 <ScrollReveal>
-                    <h3 class="section-label">"Stack technique"</h3>
+                    <h3 class="section-label">"Notre philosophie"</h3>
                 </ScrollReveal>
 
                 <ScrollReveal>
-                    <div class="stack-grid">
-                        <div class="stack-item">
-                            <span class="stack-name">"Leptos"</span>
-                            <span class="stack-role">"Framework réactif fine-grained"</span>
+                    <div class="philosophy-grid">
+                        <div class="philosophy-item">
+                            <span class="philosophy-name">"Rust natif"</span>
+                            <span class="philosophy-role">"Typage fort, zéro overhead, mémoire sûre sans GC"</span>
                         </div>
-                        <div class="stack-item">
-                            <span class="stack-name">"Trunk"</span>
-                            <span class="stack-role">"Build & dev server WASM"</span>
+                        <div class="philosophy-item">
+                            <span class="philosophy-name">"WebAssembly"</span>
+                            <span class="philosophy-role">"Bytecode binaire exécuté à vitesse native"</span>
                         </div>
-                        <div class="stack-item">
-                            <span class="stack-name">"wasm-bindgen"</span>
-                            <span class="stack-role">"Interop Rust / JS"</span>
+                        <div class="philosophy-item">
+                            <span class="philosophy-name">"Fine-grained"</span>
+                            <span class="philosophy-role">"Réactivité ciblée, pas de Virtual DOM"</span>
                         </div>
-                        <div class="stack-item">
-                            <span class="stack-name">"wasm-opt"</span>
-                            <span class="stack-role">"Optimisation binaire"</span>
+                        <div class="philosophy-item">
+                            <span class="philosophy-name">"LTO + opt-level=z"</span>
+                            <span class="philosophy-role">"Link-time optimization, panic=abort, strip"</span>
                         </div>
                     </div>
                 </ScrollReveal>
@@ -114,11 +114,11 @@ pub fn Home() -> impl IntoView {
         <section class="cta">
             <div class="container">
                 <ScrollReveal>
-                    <h2 class="cta-title">"Construisons quelque chose d'extraordinaire."</h2>
+                    <h2 class="cta-title">"Construisons l'exceptionnel, ensemble."</h2>
                 </ScrollReveal>
                 <ScrollReveal delay_ms=150>
                     <p class="cta-body">
-                        "Le groupe Hussard rassemble des développeurs passionnés par l'excellence technique."
+                        "Le groupe Hussard rassemble des développeurs passionnés, prêts à relever vos défis les plus ambitieux."
                     </p>
                 </ScrollReveal>
             </div>
