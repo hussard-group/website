@@ -153,14 +153,13 @@ body {
     min-height: 100vh;
     text-align: center;
     padding: 8rem 1.5rem 4rem;
-    background:
-        linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.65) 100%),
-        url('../assets/images/landscape.png') center / cover no-repeat;
+    background: url('../assets/images/landscape.png') center / cover no-repeat;
 }
 
 .hero-content {
     max-width: 860px;
     animation: hero-in 1.4s var(--ease-out-expo) 0.2s both;
+    text-shadow: 0 1px 24px rgba(255, 255, 255, 0.7), 0 0 48px rgba(255, 255, 255, 0.4);
 }
 
 .hero-title {
