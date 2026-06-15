@@ -12,9 +12,6 @@ pub fn Home() -> impl IntoView {
                 <span class="hero-brand">"Hussard"</span>
                 <h1 class="hero-title">"Ce qui n'existe pas encore."</h1>
             </div>
-            <div class="scroll-hint">
-                <span class="scroll-line"></span>
-            </div>
         </section>
 
         // ===== MANIFESTO =====
