@@ -22,9 +22,7 @@ pub fn Navbar() -> impl IntoView {
 
     view! {
         <nav class="navbar" class:scrolled=scrolled>
-            <div class="nav-inner">
-                <span class="brand">"Hussard"</span>
-            </div>
+            <div class="nav-inner"></div>
         </nav>
     }
 }

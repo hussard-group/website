@@ -127,20 +127,6 @@ body {
     justify-content: center;
 }
 
-.brand {
-    font-size: 1.15rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: var(--text);
-    text-decoration: none;
-    opacity: 0.9;
-    transition: opacity 0.3s var(--ease-out-quart);
-}
-
-.brand:hover {
-    opacity: 1;
-}
-
 /* ===== Hero (Light) ===== */
 .hero {
     position: relative;
