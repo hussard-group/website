@@ -12,11 +12,6 @@ pub fn Home() -> impl IntoView {
                 <span class="hero-brand">"Hussard"</span>
                 <h1 class="hero-title">"Ce qui n'existe pas encore."</h1>
             </div>
-            <ScrollReveal>
-                <div class="hero-media">
-                    <ImagePlaceholder aspect="21 / 9" class="hero-img"/>
-                </div>
-            </ScrollReveal>
             <div class="scroll-hint">
                 <span class="scroll-line"></span>
             </div>
