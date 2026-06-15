@@ -11,10 +11,7 @@ pub fn Home() -> impl IntoView {
             <div class="hero-content">
                 <h1 class="hero-title">"Hussard"</h1>
                 <p class="hero-subtitle">
-                    "Groupe de développement au service des entreprises"
-                </p>
-                <p class="hero-cta">
-                    "fortes d'innovation."
+                    "Holding de societes technologiques."
                 </p>
             </div>
             <ScrollReveal>
@@ -32,28 +29,24 @@ pub fn Home() -> impl IntoView {
             <div class="container">
                 <ScrollReveal>
                     <h2 class="manifesto-text">
-                        "Nous croyons que les entreprises qui osent innover méritent des partenaires "
-                        <em>"audacieux"</em>
-                        ", "
-                        <em>"indépendants"</em>
-                        " et "
-                        <em>"rigoureux"</em>
-                        ". C'est dans cette alliance que se construisent les projets d'exception."
+                        "Nous ne consultons pas. Nous "
+                        <em>"construisons"</em>
+                        ". Chaque entreprise du groupe est autonome, maitrise sa stack et poursuit une mission claire. Audace, independance et rigueur guident chaque projet du premier commit au premier client."
                     </h2>
                 </ScrollReveal>
             </div>
         </section>
 
-        // ===== SYNAPTIC (Première entreprise) =====
+        // ===== SYNAPTIC (Premiere entreprise) =====
         <section class="synaptic">
             <div class="container">
                 <div class="synaptic-grid">
                     <ScrollReveal>
                         <div class="synaptic-text">
-                            <span class="synaptic-label">"Première entreprise du groupe"</span>
+                            <span class="synaptic-label">"01 — Synaptic"</span>
                             <h2 class="synaptic-name">"Synaptic"</h2>
                             <p class="synaptic-desc">
-                                "Notre première entreprise concrète. Synaptic développe des solutions d'intelligence artificielle avec la même exigence technique qui définit Hussard : performance, fiabilité et souveraineté."
+                                "Intelligence artificielle. Notre premiere entreprise, dediee aux solutions IA performantes et souveraines."
                             </p>
                         </div>
                     </ScrollReveal>
@@ -86,7 +79,7 @@ pub fn Home() -> impl IntoView {
                             <span class="pillar-number">"01"</span>
                             <h4 class="pillar-title">"Audace"</h4>
                             <p class="pillar-desc">
-                                "Nous repoussons les limites. Chaque projet est une opportunité d'explorer l'inconnu et de créer ce qui n'existe pas encore."
+                                "Nous repoussons les limites. Chaque entreprise est une opportunite d'explorer l'inconnu et de creer ce qui n'existe pas encore."
                             </p>
                         </div>
                     </ScrollReveal>
@@ -94,9 +87,9 @@ pub fn Home() -> impl IntoView {
                     <ScrollReveal delay_ms=200>
                         <div class="pillar pillar--inverse">
                             <span class="pillar-number">"02"</span>
-                            <h4 class="pillar-title">"Indépendance"</h4>
+                            <h4 class="pillar-title">"Independance"</h4>
                             <p class="pillar-desc">
-                                "Pas de dépendance aux stacks legacy. Nous choisissons les meilleures technologies — et les maîtrisons de bout en bout."
+                                "Pas de dependance aux stacks legacy. Chaque entreprise choisit les meilleures technologies et les maitrise de bout en bout."
                             </p>
                         </div>
                     </ScrollReveal>
@@ -106,7 +99,7 @@ pub fn Home() -> impl IntoView {
                             <span class="pillar-number">"03"</span>
                             <h4 class="pillar-title">"Rigueur"</h4>
                             <p class="pillar-desc">
-                                "Typage fort, zéro overhead, mémoire sécurisée. Chaque ligne de code est pensée, chaque octet compte."
+                                "Typage fort, zero overhead, memoire securisee. Chaque ligne de code est pensee, chaque octet compte."
                             </p>
                         </div>
                     </ScrollReveal>
@@ -126,17 +119,17 @@ pub fn Home() -> impl IntoView {
                         <div class="philosophy-item">
                             <ImagePlaceholder aspect="4 / 3" class="philosophy-img"/>
                             <span class="philosophy-name">"Rust natif"</span>
-                            <span class="philosophy-role">"Typage fort, zéro overhead, mémoire sûre sans GC"</span>
+                            <span class="philosophy-role">"Typage fort, zero overhead, memoire sure sans GC"</span>
                         </div>
                         <div class="philosophy-item">
                             <ImagePlaceholder aspect="4 / 3" class="philosophy-img"/>
                             <span class="philosophy-name">"WebAssembly"</span>
-                            <span class="philosophy-role">"Bytecode binaire exécuté à vitesse native"</span>
+                            <span class="philosophy-role">"Bytecode binaire execute a vitesse native"</span>
                         </div>
                         <div class="philosophy-item">
                             <ImagePlaceholder aspect="4 / 3" class="philosophy-img"/>
                             <span class="philosophy-name">"Fine-grained"</span>
-                            <span class="philosophy-role">"Réactivité ciblée, pas de Virtual DOM"</span>
+                            <span class="philosophy-role">"Reactivite ciblee, pas de Virtual DOM"</span>
                         </div>
                         <div class="philosophy-item">
                             <ImagePlaceholder aspect="4 / 3" class="philosophy-img"/>
@@ -152,11 +145,11 @@ pub fn Home() -> impl IntoView {
         <section class="cta">
             <div class="container">
                 <ScrollReveal>
-                    <h2 class="cta-title">"Construisons l'exceptionnel, ensemble."</h2>
+                    <h2 class="cta-title">"Construisons la prochaine entreprise ensemble."</h2>
                 </ScrollReveal>
                 <ScrollReveal delay_ms=150>
                     <p class="cta-body">
-                        "Le groupe Hussard rassemble des développeurs passionnés, prêts à relever vos défis les plus ambitieux."
+                        "Hussard rassemble des developpeurs passionnes, prets a transformer des idees ambitieuses en entreprises technologiques concretes."
                     </p>
                 </ScrollReveal>
             </div>
@@ -166,7 +159,7 @@ pub fn Home() -> impl IntoView {
         <footer class="footer">
             <div class="container">
                 <span class="footer-brand">"Hussard"</span>
-                <span class="footer-copy">"© 2026 — Groupe de développement."</span>
+                <span class="footer-copy">"© 2026 — Holding technologique."</span>
             </div>
         </footer>
     }
