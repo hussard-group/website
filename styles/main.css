@@ -269,6 +269,50 @@ body {
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
 }
 
+/* ===== Synaptic ===== */
+.synaptic {
+    padding: var(--space-2xl) 0;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+}
+
+.synaptic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.synaptic-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+}
+
+.synaptic-name {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin-bottom: 1.25rem;
+    color: var(--text);
+}
+
+.synaptic-desc {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 440px;
+}
+
+.synaptic-img {
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.06);
+}
+
 /* ===== Showcase (Full-bleed) ===== */
 .showcase {
     padding: var(--space-2xl) 0;
@@ -500,6 +544,11 @@ body {
 @media (max-width: 640px) {
     .hero {
         padding-top: 6rem;
+    }
+
+    .synaptic-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .philosophy-grid {

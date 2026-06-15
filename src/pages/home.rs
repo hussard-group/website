@@ -44,6 +44,26 @@ pub fn Home() -> impl IntoView {
             </div>
         </section>
 
+        // ===== SYNAPTIC (Première entreprise) =====
+        <section class="synaptic">
+            <div class="container">
+                <div class="synaptic-grid">
+                    <ScrollReveal>
+                        <div class="synaptic-text">
+                            <span class="synaptic-label">"Première entreprise du groupe"</span>
+                            <h2 class="synaptic-name">"Synaptic"</h2>
+                            <p class="synaptic-desc">
+                                "Notre première entreprise concrète. Synaptic développe des solutions d'intelligence artificielle avec la même exigence technique qui définit Hussard : performance, fiabilité et souveraineté."
+                            </p>
+                        </div>
+                    </ScrollReveal>
+                    <ScrollReveal delay_ms=150>
+                        <ImagePlaceholder aspect="4 / 3" class="synaptic-img"/>
+                    </ScrollReveal>
+                </div>
+            </div>
+        </section>
+
         // ===== SHOWCASE =====
         <section class="showcase">
             <div class="showcase-inner">
