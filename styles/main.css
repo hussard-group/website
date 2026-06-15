@@ -146,25 +146,41 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     min-height: 100vh;
-    text-align: center;
-    padding: 8rem 1.5rem 4rem;
+    text-align: left;
+    padding: 10rem clamp(1.5rem, 5vw, 3rem) 4rem;
     background: url('../assets/images/landscape.png') center / cover no-repeat;
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
 .hero-content {
-    max-width: 860px;
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
     animation: hero-in 1.4s var(--ease-out-expo) 0.2s both;
+    margin: 0;
 }
 
 .hero-brand {
     display: block;
-    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-size: clamp(0.9rem, 1.8vw, 1.15rem);
     font-weight: 500;
-    color: var(--text-secondary);
-    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     margin-bottom: 0.75rem;
 }
 
@@ -174,10 +190,7 @@ body {
     letter-spacing: -0.035em;
     line-height: 1.05;
     margin-bottom: 1.5rem;
-    color: var(--text);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    color: #ffffff;
 }
 
 @keyframes hero-in {
