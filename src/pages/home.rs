@@ -11,7 +11,7 @@ pub fn Home() -> impl IntoView {
             <div class="hero-content">
                 <h1 class="hero-title">"Hussard"</h1>
                 <p class="hero-subtitle">
-                    "Holding de societes technologiques."
+                    "Nous construisons les entreprises qui changeront le monde."
                 </p>
             </div>
             <ScrollReveal>
@@ -29,24 +29,26 @@ pub fn Home() -> impl IntoView {
             <div class="container">
                 <ScrollReveal>
                     <h2 class="manifesto-text">
-                        "Nous ne consultons pas. Nous "
-                        <em>"construisons"</em>
-                        ". Chaque entreprise du groupe est autonome, maitrise sa stack et poursuit une mission claire. Audace, independance et rigueur guident chaque projet du premier commit au premier client."
+                        "La plupart des entreprises pensent en trimestres. Nous pensons en "
+                        <em>"decennies"</em>
+                        ". Nous ne cherchons pas l'optimisation. Nous cherchons "
+                        <em>"la rupture"</em>
+                        "."
                     </h2>
                 </ScrollReveal>
             </div>
         </section>
 
-        // ===== SYNAPTIC (Premiere entreprise) =====
+        // ===== SYNAPTIC =====
         <section class="synaptic">
             <div class="container">
                 <div class="synaptic-grid">
                     <ScrollReveal>
                         <div class="synaptic-text">
-                            <span class="synaptic-label">"01 — Synaptic"</span>
+                            <span class="synaptic-label">"01"</span>
                             <h2 class="synaptic-name">"Synaptic"</h2>
                             <p class="synaptic-desc">
-                                "Intelligence artificielle. Notre premiere entreprise, dediee aux solutions IA performantes et souveraines."
+                                "Intelligence artificielle. La premiere entreprise du groupe. Construite pour repousser les limites de ce que l'IA peut accomplir."
                             </p>
                         </div>
                     </ScrollReveal>
@@ -66,7 +68,7 @@ pub fn Home() -> impl IntoView {
             </div>
         </section>
 
-        // ===== VALEURS (sub-dark) =====
+        // ===== VALEURS =====
         <section class="values">
             <div class="container">
                 <ScrollReveal>
@@ -79,7 +81,7 @@ pub fn Home() -> impl IntoView {
                             <span class="pillar-number">"01"</span>
                             <h4 class="pillar-title">"Audace"</h4>
                             <p class="pillar-desc">
-                                "Nous repoussons les limites. Chaque entreprise est une opportunite d'explorer l'inconnu et de creer ce qui n'existe pas encore."
+                                "Nous ne visons pas le progres incremental. Nous visons les sauts fondamentaux. Chaque entreprise du groupe porte une ambition demesuree."
                             </p>
                         </div>
                     </ScrollReveal>
@@ -89,7 +91,7 @@ pub fn Home() -> impl IntoView {
                             <span class="pillar-number">"02"</span>
                             <h4 class="pillar-title">"Independance"</h4>
                             <p class="pillar-desc">
-                                "Pas de dependance aux stacks legacy. Chaque entreprise choisit les meilleures technologies et les maitrise de bout en bout."
+                                "Nous ne dependons de personne. Pas de plateforme, pas de stack imposé. Chaque entreprise maitrise sa destinee technique de bout en bout."
                             </p>
                         </div>
                     </ScrollReveal>
@@ -99,7 +101,7 @@ pub fn Home() -> impl IntoView {
                             <span class="pillar-number">"03"</span>
                             <h4 class="pillar-title">"Rigueur"</h4>
                             <p class="pillar-desc">
-                                "Typage fort, zero overhead, memoire securisee. Chaque ligne de code est pensee, chaque octet compte."
+                                "Ambition sans execution n'est que reve. Nous codons en Rust, livrons en WebAssembly, optimisons chaque octet. La perfection est exigee."
                             </p>
                         </div>
                     </ScrollReveal>
@@ -107,11 +109,11 @@ pub fn Home() -> impl IntoView {
             </div>
         </section>
 
-        // ===== PHILOSOPHIE (light) =====
+        // ===== PHILOSOPHIE =====
         <section class="philosophy">
             <div class="container">
                 <ScrollReveal>
-                    <h3 class="section-label">"Notre philosophie"</h3>
+                    <h3 class="section-label">"Notre methode"</h3>
                 </ScrollReveal>
 
                 <ScrollReveal>
@@ -119,22 +121,22 @@ pub fn Home() -> impl IntoView {
                         <div class="philosophy-item">
                             <ImagePlaceholder aspect="4 / 3" class="philosophy-img"/>
                             <span class="philosophy-name">"Rust natif"</span>
-                            <span class="philosophy-role">"Typage fort, zero overhead, memoire sure sans GC"</span>
+                            <span class="philosophy-role">"Memoire sure, concurrence sans peur, performance native"</span>
                         </div>
                         <div class="philosophy-item">
                             <ImagePlaceholder aspect="4 / 3" class="philosophy-img"/>
                             <span class="philosophy-name">"WebAssembly"</span>
-                            <span class="philosophy-role">"Bytecode binaire execute a vitesse native"</span>
+                            <span class="philosophy-role">"Le futur du web, execute a la vitesse du metal"</span>
                         </div>
                         <div class="philosophy-item">
                             <ImagePlaceholder aspect="4 / 3" class="philosophy-img"/>
                             <span class="philosophy-name">"Fine-grained"</span>
-                            <span class="philosophy-role">"Reactivite ciblee, pas de Virtual DOM"</span>
+                            <span class="philosophy-role">"Reactivite chirurgicale, zero Virtual DOM"</span>
                         </div>
                         <div class="philosophy-item">
                             <ImagePlaceholder aspect="4 / 3" class="philosophy-img"/>
-                            <span class="philosophy-name">"LTO + opt-level=z"</span>
-                            <span class="philosophy-role">"Link-time optimization, panic=abort, strip"</span>
+                            <span class="philosophy-name">"LTO"</span>
+                            <span class="philosophy-role">"Optimisation totale, rien ne gaspille un cycle"</span>
                         </div>
                     </div>
                 </ScrollReveal>
@@ -145,11 +147,11 @@ pub fn Home() -> impl IntoView {
         <section class="cta">
             <div class="container">
                 <ScrollReveal>
-                    <h2 class="cta-title">"Construisons la prochaine entreprise ensemble."</h2>
+                    <h2 class="cta-title">"L'histoire se souvient de ceux qui construisent."</h2>
                 </ScrollReveal>
                 <ScrollReveal delay_ms=150>
                     <p class="cta-body">
-                        "Hussard rassemble des developpeurs passionnes, prets a transformer des idees ambitieuses en entreprises technologiques concretes."
+                        "Si vous partagez cette ambition, nous devrions parler."
                     </p>
                 </ScrollReveal>
             </div>
@@ -159,7 +161,7 @@ pub fn Home() -> impl IntoView {
         <footer class="footer">
             <div class="container">
                 <span class="footer-brand">"Hussard"</span>
-                <span class="footer-copy">"© 2026 — Holding technologique."</span>
+                <span class="footer-copy">"© 2026"</span>
             </div>
         </footer>
     }
