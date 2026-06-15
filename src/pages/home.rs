@@ -1,4 +1,4 @@
-use crate::components::{Navbar, ScrollReveal};
+use crate::components::{ImagePlaceholder, Navbar, ScrollReveal};
 use leptos::prelude::*;
 
 #[component]
@@ -17,6 +17,11 @@ pub fn Home() -> impl IntoView {
                     "fortes d'innovation."
                 </p>
             </div>
+            <ScrollReveal>
+                <div class="hero-media">
+                    <ImagePlaceholder aspect="21 / 9" class="hero-img"/>
+                </div>
+            </ScrollReveal>
             <div class="scroll-hint">
                 <span class="scroll-line"></span>
             </div>
@@ -35,6 +40,15 @@ pub fn Home() -> impl IntoView {
                         <em>"rigoureux"</em>
                         ". C'est dans cette alliance que se construisent les projets d'exception."
                     </h2>
+                </ScrollReveal>
+            </div>
+        </section>
+
+        // ===== SHOWCASE =====
+        <section class="showcase">
+            <div class="showcase-inner">
+                <ScrollReveal>
+                    <ImagePlaceholder aspect="16 / 9" class="showcase-img"/>
                 </ScrollReveal>
             </div>
         </section>
@@ -90,18 +104,22 @@ pub fn Home() -> impl IntoView {
                 <ScrollReveal>
                     <div class="philosophy-grid">
                         <div class="philosophy-item">
+                            <ImagePlaceholder aspect="4 / 3" class="philosophy-img"/>
                             <span class="philosophy-name">"Rust natif"</span>
                             <span class="philosophy-role">"Typage fort, zéro overhead, mémoire sûre sans GC"</span>
                         </div>
                         <div class="philosophy-item">
+                            <ImagePlaceholder aspect="4 / 3" class="philosophy-img"/>
                             <span class="philosophy-name">"WebAssembly"</span>
                             <span class="philosophy-role">"Bytecode binaire exécuté à vitesse native"</span>
                         </div>
                         <div class="philosophy-item">
+                            <ImagePlaceholder aspect="4 / 3" class="philosophy-img"/>
                             <span class="philosophy-name">"Fine-grained"</span>
                             <span class="philosophy-role">"Réactivité ciblée, pas de Virtual DOM"</span>
                         </div>
                         <div class="philosophy-item">
+                            <ImagePlaceholder aspect="4 / 3" class="philosophy-img"/>
                             <span class="philosophy-name">"LTO + opt-level=z"</span>
                             <span class="philosophy-role">"Link-time optimization, panic=abort, strip"</span>
                         </div>
