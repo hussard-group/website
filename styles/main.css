@@ -107,8 +107,7 @@ body {
     transition:
         background 0.5s var(--ease-out-quart),
         backdrop-filter 0.5s var(--ease-out-quart),
-        border-color 0.5s var(--ease-out-quart),
-        box-shadow 0.5s var(--ease-out-quart);
+        border-color 0.5s var(--ease-out-quart);
     border-bottom: 1px solid transparent;
 }
 
@@ -117,7 +116,6 @@ body {
     backdrop-filter: blur(20px) saturate(1.4);
     -webkit-backdrop-filter: blur(20px) saturate(1.4);
     border-bottom-color: var(--border);
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
 }
 
 .nav-inner {
@@ -159,7 +157,6 @@ body {
 .hero-content {
     max-width: 860px;
     animation: hero-in 1.4s var(--ease-out-expo) 0.2s both;
-    text-shadow: 0 1px 24px rgba(255, 255, 255, 0.7), 0 0 48px rgba(255, 255, 255, 0.4);
 }
 
 .hero-title {
@@ -261,7 +258,6 @@ body {
 }
 
 .hero-img {
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
 }
 
 /* ===== Synaptic ===== */
@@ -305,7 +301,6 @@ body {
 }
 
 .synaptic-img {
-    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.06);
 }
 
 /* ===== Showcase (Full-bleed) ===== */
@@ -322,7 +317,6 @@ body {
 }
 
 .showcase-img {
-    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.06);
 }
 
 /* ===== Manifesto (Sub-light) ===== */
@@ -394,14 +388,12 @@ body {
     border-radius: var(--radius);
     transition:
         transform 0.6s var(--ease-out-expo),
-        border-color 0.6s var(--ease-out-expo),
-        box-shadow 0.6s var(--ease-out-expo);
+        border-color 0.6s var(--ease-out-expo);
 }
 
 .pillar:hover {
     transform: translateY(-4px);
     border-color: rgba(255, 122, 61, 0.2);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
 }
 
 .pillar-number {
