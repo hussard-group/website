@@ -159,30 +159,25 @@ body {
     animation: hero-in 1.4s var(--ease-out-expo) 0.2s both;
 }
 
-.hero-title {
-    font-size: clamp(4rem, 12vw, 8.5rem);
-    font-weight: 600;
-    letter-spacing: -0.045em;
-    line-height: 1.0;
-    margin-bottom: 1.5rem;
-    color: var(--text);
-}
-
-.hero-subtitle {
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
+.hero-brand {
+    display: block;
+    font-size: clamp(1rem, 2vw, 1.35rem);
     font-weight: 500;
     color: var(--text-secondary);
-    letter-spacing: -0.01em;
-    max-width: 520px;
-    margin: 0 auto 1rem;
-    line-height: 1.4;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.75rem;
 }
 
-.hero-cta {
-    font-size: 0.95rem;
-    font-weight: 400;
-    color: var(--text-tertiary);
-    letter-spacing: 0.02em;
+.hero-title {
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .scroll-hint {

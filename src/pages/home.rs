@@ -9,10 +9,8 @@ pub fn Home() -> impl IntoView {
         // ===== HERO =====
         <section class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">"Hussard"</h1>
-                <p class="hero-subtitle">
-                    "Nous construisons les entreprises qui changeront le monde."
-                </p>
+                <span class="hero-brand">"Hussard"</span>
+                <h1 class="hero-title">"Ce qui n'existe pas encore."</h1>
             </div>
             <ScrollReveal>
                 <div class="hero-media">
