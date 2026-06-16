@@ -208,11 +208,45 @@ body {
 }
 
 .synaptic-header {
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-xl);
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     gap: 2rem;
+}
+
+.synaptic-header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.synaptic-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    transition: color 0.25s ease;
+    white-space: nowrap;
+}
+
+.synaptic-link:hover {
+    color: #1d4ed8;
+}
+
+.synaptic-link svg {
+    transition: transform 0.2s ease;
+}
+
+.synaptic-link:hover svg {
+    transform: translate(1px, -1px);
 }
 
 .synaptic-name {
@@ -232,11 +266,11 @@ body {
 }
 
 .synaptic-header-wrap {
-    padding: 0 clamp(2.5rem, 7vw, 5rem);
+    padding: 0 clamp(3rem, 8vw, 6rem);
 }
 
 .synaptic-img-wrap {
-    padding: 0 clamp(2.5rem, 7vw, 5rem);
+    padding: 0 clamp(3rem, 8vw, 6rem);
 }
 
 .synaptic-img {
@@ -393,6 +427,11 @@ body {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+    }
+
+    .synaptic-header-right {
+        align-items: flex-start;
+        gap: 0.75rem;
     }
 
     .synaptic-desc {

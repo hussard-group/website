@@ -36,9 +36,18 @@ pub fn Home() -> impl IntoView {
                 <div class="synaptic-header-wrap">
                     <div class="synaptic-header">
                         <h2 class="synaptic-name">"Synaptic"</h2>
-                        <p class="synaptic-desc">
-                            "The first company in the group. Pushing the boundaries of what AI can accomplish."
-                        </p>
+                        <div class="synaptic-header-right">
+                            <p class="synaptic-desc">
+                                "The first company in the group. Pushing the boundaries of what AI can accomplish."
+                            </p>
+                            <a class="synaptic-link" href="https://sinstry.com" target="_blank" rel="noopener noreferrer">
+                                "Visit site"
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 17L17 7"/>
+                                    <path d="M7 7h10v10"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </ScrollReveal>
