@@ -9,7 +9,13 @@ pub fn Home() -> impl IntoView {
         // ===== HERO =====
         <section class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">"What does not exist yet."</h1>
+                <h1 class="hero-title">"We are not the strongest. We are the ones who change."</h1>
+            </div>
+            <div class="hero-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 13l5 5 5-5"/>
+                    <path d="M12 18V6"/>
+                </svg>
             </div>
         </section>
 
@@ -18,10 +24,8 @@ pub fn Home() -> impl IntoView {
             <div class="container">
                 <ScrollReveal>
                     <h2 class="manifesto-text">
-                        "Most companies think in quarters. We think in "
-                        <em>"decades"</em>
-                        ". We do not seek optimization. We seek "
-                        <em>"the breakthrough"</em>
+                        "Most stand in awe of human potential. We stand to act. Not merely to witness, but to build what "
+                        <em>"outlasts our time"</em>
                         "."
                     </h2>
                 </ScrollReveal>
@@ -30,19 +34,17 @@ pub fn Home() -> impl IntoView {
 
         // ===== SYNAPTIC =====
         <section class="synaptic">
-            <div class="container">
-                <ScrollReveal>
+            <ScrollReveal>
+                <div class="synaptic-header-wrap">
                     <div class="synaptic-header">
                         <h2 class="synaptic-name">"Synaptic"</h2>
+                        <p class="synaptic-desc">
+                            "The first company in the group. Pushing the boundaries of what AI can accomplish."
+                        </p>
                     </div>
-                </ScrollReveal>
-                <ScrollReveal delay_ms=150>
-                    <p class="synaptic-desc">
-                        "The first company in the group. Pushing the boundaries of what AI can accomplish."
-                    </p>
-                </ScrollReveal>
-            </div>
-            <ScrollReveal delay_ms=250>
+                </div>
+            </ScrollReveal>
+            <ScrollReveal delay_ms=150>
                 <div class="synaptic-img-wrap">
                     <img
                         src="assets/images/data-center.png"
@@ -83,7 +85,7 @@ pub fn Home() -> impl IntoView {
                     </h2>
                 </ScrollReveal>
                 <ScrollReveal delay_ms=150>
-                    <a class="cta-button" href="mailto:hello@hussard.group">
+                    <a class="cta-button" href="mailto:hussard.group@proton.me">
                         "Which species are you?"
                     </a>
                 </ScrollReveal>
@@ -93,8 +95,15 @@ pub fn Home() -> impl IntoView {
         // ===== FOOTER =====
         <footer class="footer">
             <div class="container">
-                <span class="footer-brand">"Hussard"</span>
-                <span class="footer-copy">"2026"</span>
+                <div class="footer-main">
+                    <nav class="footer-nav">
+                        <a href="mailto:hussard.group@proton.me">"Contact"</a>
+                        <a href="#">"Privacy"</a>
+                    </nav>
+                </div>
+                <div class="footer-bottom">
+                    <span class="footer-copy">"2026 Hussard Group. All rights reserved."</span>
+                </div>
             </div>
         </footer>
     }
