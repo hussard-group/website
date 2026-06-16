@@ -1,4 +1,5 @@
 use leptos::prelude::*;
+use send_wrapper::SendWrapper;
 use wasm_bindgen::JsCast;
 
 #[component]
@@ -14,10 +15,16 @@ pub fn Navbar() -> impl IntoView {
     Effect::new(move |_| {
         let window = web_sys::window().unwrap();
         let closure = wasm_bindgen::closure::Closure::wrap(Box::new(on_scroll) as Box<dyn Fn()>);
+        let closure = SendWrapper::new(closure);
+        let cb = closure.as_ref().unchecked_ref();
         window
-            .add_event_listener_with_callback("scroll", closure.as_ref().unchecked_ref())
+            .add_event_listener_with_callback("scroll", cb)
             .unwrap();
-        closure.forget();
+
+        on_cleanup(move || {
+            let c = SendWrapper::take(closure);
+            let _ = window.remove_event_listener_with_callback("scroll", c.as_ref().unchecked_ref());
+        });
     });
 
     view! {

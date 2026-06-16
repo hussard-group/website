@@ -1,7 +1,7 @@
 mod components;
 mod pages;
 
-use components::Layout;
+use components::{Layout, LegalPage};
 use leptos::prelude::*;
 use leptos_router::{
     components::{ParentRoute, Route, Router, Routes},
@@ -18,7 +18,7 @@ fn main() {
 fn App() -> impl IntoView {
     view! {
         <Router>
-            <Routes fallback=|| view! { <main class="legal-page"><div class="container"><h1>"Page not found"</h1></div></main> }>
+            <Routes fallback=|| view! { <LegalPage title="Page not found">{|| view! {}}</LegalPage> }>
                 <ParentRoute path=path!("") view=Layout>
                     <Route path=path!("") view=Home/>
                     <Route path=path!("legal-notice") view=LegalNotice/>

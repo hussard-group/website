@@ -1,4 +1,5 @@
 use leptos::prelude::*;
+use send_wrapper::SendWrapper;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsCast;
 use web_sys::{IntersectionObserver, IntersectionObserverInit};
@@ -24,6 +25,7 @@ pub fn ScrollReveal(
                     }
                 }
             }) as Box<dyn FnMut(Vec<JsValue>)>);
+            let callback = SendWrapper::new(callback);
 
             let options = IntersectionObserverInit::new();
             options.set_threshold(&JsValue::from_f64(0.15));
@@ -33,9 +35,15 @@ pub fn ScrollReveal(
                 &options,
             )
             .unwrap();
+            let observer = SendWrapper::new(observer);
 
             observer.observe(&el_html);
-            callback.forget();
+
+            on_cleanup(move || {
+                let obs = SendWrapper::take(observer);
+                obs.disconnect();
+                drop(SendWrapper::take(callback));
+            });
         }
     });
 
