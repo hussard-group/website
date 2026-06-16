@@ -1,11 +1,9 @@
-use crate::components::{Navbar, ScrollReveal};
+use crate::components::ScrollReveal;
 use leptos::prelude::*;
 
 #[component]
 pub fn Home() -> impl IntoView {
     view! {
-        <Navbar/>
-
         // ===== HERO =====
         <section class="hero">
             <div class="hero-content">
@@ -92,19 +90,5 @@ pub fn Home() -> impl IntoView {
             </div>
         </section>
 
-        // ===== FOOTER =====
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-main">
-                    <nav class="footer-nav">
-                        <a href="mailto:hussard.group@proton.me">"Contact"</a>
-                        <a href="#">"Privacy"</a>
-                    </nav>
-                </div>
-                <div class="footer-bottom">
-                    <span class="footer-copy">"2026 Hussard Group. All rights reserved."</span>
-                </div>
-            </div>
-        </footer>
     }
 }

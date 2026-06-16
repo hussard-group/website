@@ -291,7 +291,7 @@ body {
 
 .stat-value {
     font-size: clamp(1.6rem, 3vw, 2.4rem);
-    font-weight: 600;
+    font-weight: 550;
     letter-spacing: -0.03em;
     line-height: 1.1;
     color: var(--text);
@@ -313,7 +313,7 @@ body {
 
 .cta-title {
     font-size: clamp(1.8rem, 4.5vw, 3.2rem);
-    font-weight: 600;
+    font-weight: 550;
     letter-spacing: -0.03em;
     line-height: 1.15;
     max-width: 680px;
@@ -416,4 +416,54 @@ body {
     .footer-nav {
         gap: 1.5rem;
     }
+}
+
+/* ===== Legal Pages ===== */
+.legal-page {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-xl);
+    background: var(--bg);
+    min-height: 100vh;
+}
+
+.legal-page h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+    color: var(--text);
+}
+
+.legal-updated {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-lg);
+}
+
+.legal-page section {
+    margin-bottom: var(--space-lg);
+}
+
+.legal-page h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-sm);
+    color: var(--text);
+}
+
+.legal-page p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-xs);
+    max-width: 720px;
+}
+
+.footer-nav a {
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--text);
 }
