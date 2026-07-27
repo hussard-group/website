@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const sections = [
+    { title: 'Publisher', content: 'This website is published by Hussard Group. Headquarters: Paris, France. Contact: hussard.group@proton.me' },
+    { title: 'Publication Director', content: 'Hussard Group' },
+    { title: 'Hosting', content: 'This site is hosted by GitHub Pages (GitHub, Inc.). 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, United States' },
+    { title: 'Intellectual Property', content: 'All content on this site, including but not limited to text, graphics, logos, images, and software, is the property of Hussard Group and is protected by French and international intellectual property laws. Any reproduction, distribution, or use without prior written permission is strictly prohibited.' },
+];
+---
+
+<Layout title="Legal Notice - Hussard">
+    <main class="legal-page">
+        <div class="container">
+            <h1>Legal Notice</h1>
+            {sections.map((s) => (
+                <section>
+                    <h2>{s.title}</h2>
+                    <p>{s.content}</p>
+                </section>
+            ))}
+        </div>
+    </main>
+</Layout>

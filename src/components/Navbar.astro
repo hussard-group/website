@@ -1,0 +1,21 @@
+---
+---
+
+<nav class="navbar" id="navbar">
+    <div class="nav-inner"></div>
+</nav>
+
+<script>
+    const navbar = document.getElementById('navbar')!;
+    let scrolled = false;
+
+    function onScroll() {
+        const y = window.scrollY;
+        const shouldScroll = y > 40;
+        if (shouldScroll === scrolled) return;
+        scrolled = shouldScroll;
+        navbar.classList.toggle('scrolled', scrolled);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+</script>

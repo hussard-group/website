@@ -1,6 +1,19 @@
-/target
-/dist
-/Cargo.lock
+# deps
+/node_modules/
+
+# build
+/dist/
+/.astro/
+
+# env
+.env
+.env.*
+
+# editor/os
 *.swp
 *.swo
 .DS_Store
+
+# legacy rust
+/target/
+/Cargo.lock
