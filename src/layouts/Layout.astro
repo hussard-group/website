@@ -1,46 +1,54 @@
 ---
 import '../styles/main.css';
-import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
 
 export interface Props {
-  title?: string;
-  description?: string;
+    title?: string;
+    description?: string;
 }
 
 const {
-  title = 'Hussard',
-  description = 'Hussard - Development group. Rust, WASM, native performance.',
+    title = 'Hussard',
+    description = 'Hussard - Development group. Rust, WASM, native performance.',
 } = Astro.props;
 
-const canonical = 'https://hussard.group' + Astro.url.pathname;
+const canonical = `https://hussard.group${Astro.url.pathname}`;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <meta name="theme-color" content="#000000" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-    <link rel="preload" href="/assets/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
-    <title>{title}</title>
-    <link rel="canonical" href={canonical} />
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content={description}>
+        <meta name="theme-color" content="#000000">
+        <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+        <link
+            rel="preload"
+            href="/assets/fonts/InterVariable.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        >
+        <title>{title}</title>
+        <link rel="canonical" href={canonical}>
 
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Hussard" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
-    <meta property="og:image" content="https://hussard.group/assets/images/landscape.png" />
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Hussard">
+        <meta property="og:title" content={title}>
+        <meta property="og:description" content={description}>
+        <meta property="og:url" content={canonical}>
+        <meta property="og:image" content="https://hussard.group/assets/images/landscape.png">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://hussard.group/assets/images/landscape.png" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content={title}>
+        <meta name="twitter:description" content={description}>
+        <meta name="twitter:image" content="https://hussard.group/assets/images/landscape.png">
 
-    <script type="application/ld+json" set:html={`{
+        <script
+            type="application/ld+json"
+            set:html={`{
       "@context": "https://schema.org",
       "@graph": [
         {
@@ -57,27 +65,35 @@ const canonical = 'https://hussard.group' + Astro.url.pathname;
           "inLanguage": "en"
         }
       ]
-    }`} />
-</head>
-<body>
-    <Navbar />
-    <slot />
-    <Footer />
+    }`}
+        />
+    </head>
+    <body>
+        <Navbar />
+        <slot />
+        <Footer />
 
-    <script>
+        <script>
         const reveals = document.querySelectorAll('.reveal');
         if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.15 });
-            reveals.forEach((el) => observer.observe(el));
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                },
+                { threshold: 0.15 },
+            );
+            reveals.forEach((el) => {
+                observer.observe(el);
+            });
         } else {
-            reveals.forEach((el) => el.classList.add('visible'));
+            reveals.forEach((el) => {
+                el.classList.add('visible');
+            });
         }
-    </script>
-</body>
+        </script>
+    </body>
 </html>

@@ -26,7 +26,7 @@
     --text-secondary: #86868b;
     --text-tertiary: #6e6e73;
     --text-inverse: #f5f5f7;
-    --accent: #2563EB;
+    --accent: #2563eb;
     --accent-soft: rgba(37, 99, 235, 0.12);
     --border: rgba(0, 0, 0, 0.06);
     --border-light: rgba(0, 0, 0, 0.04);
@@ -171,8 +171,14 @@ body {
 }
 
 @keyframes hero-in {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ===== Image Placeholder ===== */
@@ -195,8 +201,6 @@ body {
     text-transform: uppercase;
     z-index: 1;
 }
-
-
 
 /* ===== Synaptic ===== */
 .synaptic {
@@ -253,7 +257,7 @@ body {
     font-size: clamp(3.5rem, 10vw, 8rem);
     font-weight: 500;
     letter-spacing: -0.045em;
-    line-height: 1.0;
+    line-height: 1;
     color: var(--text);
 }
 
@@ -280,8 +284,6 @@ body {
     object-fit: cover;
     border-radius: var(--radius);
 }
-
-
 
 /* ===== Manifesto (Sub-light) ===== */
 .manifesto {
