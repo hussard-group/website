@@ -2,6 +2,7 @@
 import '../styles/main.css';
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
+import { canonical } from '../lib/site';
 
 export interface Props {
     title?: string;
@@ -13,7 +14,7 @@ const {
     description = 'Hussard - Development group. Rust, WASM, native performance.',
 } = Astro.props;
 
-const canonical = `https://hussard.group${Astro.url.pathname}`;
+const canonicalUrl = canonical(Astro.url.pathname);
 ---
 
 <!DOCTYPE html>
@@ -32,13 +33,13 @@ const canonical = `https://hussard.group${Astro.url.pathname}`;
             crossorigin
         >
         <title>{title}</title>
-        <link rel="canonical" href={canonical}>
+        <link rel="canonical" href={canonicalUrl}>
 
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Hussard">
         <meta property="og:title" content={title}>
         <meta property="og:description" content={description}>
-        <meta property="og:url" content={canonical}>
+        <meta property="og:url" content={canonicalUrl}>
         <meta property="og:image" content="https://hussard.group/assets/images/landscape.png">
 
         <meta name="twitter:card" content="summary_large_image">
