@@ -1,3 +1,10 @@
+/* Shared control recipe tokens + classes from @sinstry-research/design
+   (built output; run `bun run build` in ../sinstry-research/design). */
+@import '../../../sinstry-research/design/dist/styles/tokens/theme.css';
+@import '../../../sinstry-research/design/dist/styles/components/control.css';
+@import '../../../sinstry-research/design/dist/styles/components/button.css';
+@import '../../../sinstry-research/design/dist/styles/components/button-variants.css';
+
 /* ===== Inter Variable - Latest Official ===== */
 @font-face {
     font-family: 'Inter';
@@ -357,22 +364,15 @@ body {
     color: var(--text);
 }
 
+/* CTA consumes the shared button recipe (`.button` + `btn-variant--accent` +
+   `button--radius-full` + `control--lg`); this class carries layout only. */
 .cta-button {
-    display: inline-block;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #ffffff;
-    background: var(--accent);
-    padding: 0.9rem 2.2rem;
-    border-radius: 100px;
-    text-decoration: none;
-    letter-spacing: -0.01em;
     margin-top: var(--space-md);
-    transition: background 0.25s ease;
 }
 
-.cta-button:hover {
-    background: #3b82f6;
+.cta-button:focus-visible {
+    outline: var(--outline-width) solid var(--focus-ring-color, Highlight);
+    outline-offset: var(--outline-offset);
 }
 
 /* ===== Footer ===== */

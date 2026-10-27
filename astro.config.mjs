@@ -16,5 +16,10 @@ export default defineConfig({
             target: 'esnext',
             reportCompressedSize: false,
         },
+        server: {
+            fs: {
+                allow: ['..'],
+            },
+        },
     },
 });
