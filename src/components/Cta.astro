@@ -1,10 +1,10 @@
 ---
-import { EMAIL } from '../lib/site';
 /* Shared button recipe from @sinstry-research/design (built output;
    run `bun run build` in ../sinstry-research/design). Same mechanism as
    the CSS imports in main.css — the composer resolves the canonical
    class combination so markup can never drift from the registry. */
 import { buttonClass } from '../../../sinstry-research/design/dist/components/ui/button/recipe.js';
+import { EMAIL } from '../lib/site';
 ---
 
 <section class="cta">
@@ -16,7 +16,12 @@ import { buttonClass } from '../../../sinstry-research/design/dist/components/ui
             </h2>
         </div>
         <div class="reveal" style="transition-delay: 150ms">
-            <a class={`cta-button ${buttonClass({ variant: 'accent', radius: 'full', size: 'lg' })}`} href={`mailto:${EMAIL}`}> Which species are you? </a>
+            <a
+                class={`cta-button ${buttonClass({ variant: 'accent', radius: 'full', size: 'lg' })}`}
+                href={`mailto:${EMAIL}`}
+            >
+                Which species are you?
+            </a>
         </div>
     </div>
 </section>
