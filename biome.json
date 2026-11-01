@@ -1,21 +1,14 @@
 {
-    "$schema": "https://biomejs.dev/schemas/2.6.3/schema.json",
-    "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
-    "files": { "includes": ["**"] },
+    "$schema": "https://biomejs.dev/schemas/2.6.4/schema.json",
+    "extends": ["@sinstry-research/shared-ts/configs/astro"],
     "formatter": {
         "enabled": true,
         "indentStyle": "space",
         "indentWidth": 4,
         "lineWidth": 100
     },
-    "linter": { "enabled": true, "rules": { "preset": "recommended" } },
     "javascript": {
-        "formatter": { "quoteStyle": "single", "trailingCommas": "all" }
+        "formatter": { "trailingCommas": "all" }
     },
-    "css": { "formatter": { "quoteStyle": "single" } },
-    "html": {
-        "experimentalFullSupportEnabled": true,
-        "formatter": { "enabled": true }
-    },
-    "assist": { "actions": { "source": { "organizeImports": "on" } } }
+    "css": { "formatter": { "quoteStyle": "single" } }
 }

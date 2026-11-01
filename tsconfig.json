@@ -1,5 +1,9 @@
 {
-    "extends": "astro/tsconfigs/strict",
+    "extends": ["astro/tsconfigs/strict", "@sinstry-research/shared-ts/tsconfig.base"],
+    "compilerOptions": {
+        "isolatedDeclarations": false,
+        "declaration": false
+    },
     "include": [".astro/types.d.ts", "**/*"],
     "exclude": ["dist"]
 }
