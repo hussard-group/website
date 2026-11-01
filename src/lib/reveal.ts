@@ -2,7 +2,7 @@ const THRESHOLD = 0.15;
 
 export const reveal = (
     els: Iterable<Element>,
-    win: Pick<Window, 'IntersectionObserver'> = window,
+    win: Pick<typeof globalThis, 'IntersectionObserver'> = window,
 ): IntersectionObserver | null => {
     const targets = [...els];
     if ('IntersectionObserver' in win) {
