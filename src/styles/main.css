@@ -34,7 +34,7 @@
     --text-tertiary: var(--text-tertiary);
     --text-inverse: var(--text-primary-inverse);
     --accent: var(--accent-info);
-    --accent-soft: color-mix(in oklch, var(--accent-info), transparent 88%);
+    --accent-soft: color-mix(in oklch, var(--accent-info) var(--mix-share-12), transparent);
     --border: var(--border-on-base-hairline);
     --border-light: var(--border-on-base-hairline);
     --border-inverse: var(--border-overlay-light);
@@ -127,7 +127,7 @@ body {
 }
 
 .navbar.scrolled {
-    background: color-mix(in oklch, var(--surface-base), transparent 28%);
+    background: color-mix(in oklch, var(--surface-base) var(--mix-share-72), transparent);
     backdrop-filter: blur(20px) saturate(1.4);
     -webkit-backdrop-filter: blur(20px) saturate(1.4);
     border-bottom-color: var(--border);
