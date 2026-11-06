@@ -11,14 +11,14 @@ export interface Props {
 
 const {
     title = 'Hussard',
-    description = 'Hussard - Development group. Rust, WASM, native performance.',
+    description = 'Hussard - A development group for a species that refuses to stop evolving.',
 } = Astro.props;
 
 const canonicalUrl = canonical(Astro.url.pathname);
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-context="website" data-theme="light">
     <head>
         <!-- First evaluated style: pins cascade layer precedence before any
              dev-injected <style> tag (see design styles/base/index.css). -->
@@ -28,15 +28,9 @@ const canonicalUrl = canonical(Astro.url.pathname);
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content={description}>
-        <meta name="theme-color" content="#000000">
+        <meta name="theme-color" content="#fbfbfd">
+        <meta name="color-scheme" content="light dark">
         <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-        <link
-            rel="preload"
-            href="/assets/fonts/InterVariable.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        >
         <title>{title}</title>
         <link rel="canonical" href={canonicalUrl}>
 
@@ -45,12 +39,12 @@ const canonicalUrl = canonical(Astro.url.pathname);
         <meta property="og:title" content={title}>
         <meta property="og:description" content={description}>
         <meta property="og:url" content={canonicalUrl}>
-        <meta property="og:image" content="https://hussard.group/assets/images/landscape.png">
+        <meta property="og:image" content="https://hussard.group/assets/rocket.jpg">
 
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content={title}>
         <meta name="twitter:description" content={description}>
-        <meta name="twitter:image" content="https://hussard.group/assets/images/landscape.png">
+        <meta name="twitter:image" content="https://hussard.group/assets/rocket.jpg">
 
         <script
             type="application/ld+json"
@@ -62,7 +56,7 @@ const canonicalUrl = canonical(Astro.url.pathname);
           "name": "Hussard Group",
           "url": "https://hussard.group/",
           "email": "hussard.group@proton.me",
-          "description": "Development group. Rust, WASM, native performance."
+          "description": "A development group for a species that refuses to stop evolving."
         },
         {
           "@type": "WebSite",
@@ -73,33 +67,24 @@ const canonicalUrl = canonical(Astro.url.pathname);
       ]
     }`}
         />
+        <script is:inline>
+        document.documentElement.classList.add('js');
+        </script>
     </head>
     <body>
         <Navbar />
-        <slot />
+        <main class="website-layout__main">
+            <slot />
+        </main>
         <Footer />
 
         <script>
-        const reveals = document.querySelectorAll('.reveal');
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                        }
-                    });
-                },
-                { threshold: 0.15 },
-            );
-            reveals.forEach((el) => {
-                observer.observe(el);
-            });
-        } else {
-            reveals.forEach((el) => {
-                el.classList.add('visible');
-            });
-        }
+        import { reveal } from '../lib/reveal';
+        import { bindScrub, bindZoom } from '../lib/scrub';
+
+        reveal(document.querySelectorAll('.fade'));
+        bindScrub(document.querySelectorAll('.scrub'));
+        bindZoom(document.querySelectorAll('.zoom'));
         </script>
     </body>
 </html>

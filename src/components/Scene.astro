@@ -1,0 +1,26 @@
+---
+export interface Props {
+    text: string;
+    dim?: boolean;
+}
+
+const { text, dim = false } = Astro.props;
+
+const words = text.split(' ').map((w) => ({
+    t: w.replace(/^[!*]/, ''),
+    c: `w${w.startsWith('!') ? ' sig' : w.startsWith('*') ? ' em' : ''}`,
+}));
+---
+
+<section class={`scene scrub${dim ? ' scene-dim' : ''}`} data-theme={dim ? 'sub-light' : 'light'}>
+    <div class="scene-pin">
+        <p class="scene-text typo-display-2">
+            {words.map((w, i) => (
+                <>
+                    {i > 0 && ' '}
+                    <span class={w.c}>{w.t}</span>
+                </>
+            ))}
+        </p>
+    </div>
+</section>

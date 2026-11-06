@@ -1,26 +1,16 @@
 ---
-/* Shared button recipe from @sinstry-research/design (built output;
-   run `bun run build` in ../sinstry-research/design). Same mechanism as
-   the CSS imports in main.css — the composer resolves the canonical
-   class combination so markup can never drift from the registry. */
-import { buttonClass } from '../../../sinstry-research/design/dist/components/ui/button/recipe.js';
+import { buttonClass } from '@sinstry-research/design/button/recipe';
 import { EMAIL } from '../lib/site';
 ---
 
-<section class="cta">
-    <div class="container">
-        <div class="reveal">
-            <h2 class="cta-title">
-                What sets humans apart from animals is the ability to adapt and to learn rapidly,
-                iteratively.
-            </h2>
-        </div>
-        <div class="reveal" style="transition-delay: 150ms">
-            <a
-                class={`cta-button ${buttonClass({ variant: 'accent', radius: 'full', size: 'lg' })}`}
-                href={`mailto:${EMAIL}`}
-            >
-                Which species are you?
+<section class="website-section website-cta-section" data-theme="light">
+    <div class="website-container website-cta-center">
+        <header class="website-section-header fade">
+            <h2 class="typo-h3">Which species are you?</h2>
+        </header>
+        <div class="website-cta-buttons fade" style="transition-delay: 150ms">
+            <a class={buttonClass({ variant: 'accent' })} href={`mailto:${EMAIL}`}>
+                Join Us
             </a>
         </div>
     </div>

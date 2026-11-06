@@ -16,6 +16,9 @@ export default defineConfig({
             target: 'esnext',
             reportCompressedSize: false,
         },
+        optimizeDeps: {
+            exclude: ['@sinstry-research/design'],
+        },
         server: {
             fs: {
                 allow: ['..'],

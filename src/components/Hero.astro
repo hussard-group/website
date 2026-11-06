@@ -1,24 +1,49 @@
 ---
 ---
 
-<section class="hero">
-    <div class="hero-content">
-        <h1 class="hero-title">We are not the strongest. We are the ones who change.</h1>
+<section
+    class="website-hero website-hero--dark website-hero--rich-media website-hero--full-bleed website-hero--start"
+    data-theme="dark"
+>
+    <div class="website-hero-video-overlay" aria-hidden="true"></div>
+    <img
+        class="website-hero-media"
+        src="/assets/rocket.jpg"
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+    >
+    <div class="website-container inner">
+        <header class="website-section-header">
+            <h1 class="typo-display-1">To be human is to evolve.</h1>
+            <p class="subtitle">The only species that builds its own future.</p>
+        </header>
     </div>
-    <div class="hero-arrow">
+    <button type="button" class="arrow" id="hero-next" aria-label="Next section">
         <svg
             aria-hidden="true"
-            width="24"
-            height="24"
+            width="28"
+            height="28"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="white"
+            stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
         >
-            <path d="M7 13l5 5 5-5" />
-            <path d="M12 18V6" />
+            <path d="M6 9l6 6l6-6" pathLength="1" />
         </svg>
-    </div>
+    </button>
 </section>
+
+<script>
+import { scrollToEl } from '../lib/motion';
+
+const btn = document.getElementById('hero-next');
+const hero = btn?.closest('.website-hero');
+btn?.addEventListener('click', () => {
+    const next = (hero?.nextElementSibling ??
+        hero?.parentElement?.nextElementSibling) as HTMLElement | null;
+    if (next) scrollToEl(next);
+});
+</script>

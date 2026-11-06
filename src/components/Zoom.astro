@@ -1,0 +1,37 @@
+---
+const { word = 'HUSSARD', src = '/assets/weld.mp4', poster = '/assets/rocket.jpg' } = Astro.props;
+---
+
+<section class="zoom" aria-label={word}>
+    <div class="zoom-pin">
+        <video
+            class="zoom-media"
+            src={src}
+            poster={poster}
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+        ></video>
+        <svg class="zoom-veil" aria-hidden="true" focusable="false">
+            <defs>
+                <mask id="zoom-mask">
+                    <rect class="zoom-cover" x="-5%" y="-5%" width="110%" height="110%" />
+                    <text class="zoom-word-text" x="50%" y="50%" font-size="160">{word}</text>
+                </mask>
+            </defs>
+            <rect class="zoom-veil-rect" width="100%" height="100%" mask="url(#zoom-mask)" />
+        </svg>
+        <video
+            class="zoom-full"
+            src={src}
+            poster={poster}
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+        ></video>
+    </div>
+</section>

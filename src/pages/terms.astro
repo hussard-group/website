@@ -46,16 +46,20 @@ const sections = [
 ---
 
 <Layout title="Terms of Service - Hussard">
-    <main class="legal-page">
-        <div class="container">
-            <h1>Terms of Service</h1>
-            <p class="legal-updated">Last updated: June 16, 2026</p>
-            {sections.map((s) => (
-                <section>
-                    <h2>{s.title}</h2>
-                    <p>{s.content}</p>
-                </section>
-            ))}
+    <section class="website-section" data-theme="light">
+        <div class="website-section-content content-width-article">
+            <header class="website-stack website-stack--heading-body">
+                <h1 class="typo-h2">Terms of Service</h1>
+                <p class="typo-body-lg">Last updated: June 16, 2026</p>
+            </header>
+            <div class="website-prose legal-prose">
+                {sections.map((s) => (
+                    <section class="website-stack website-stack--heading-body website-prose-section">
+                        <h3 class="typo-h3">{s.title}</h3>
+                        <p>{s.content}</p>
+                    </section>
+                ))}
+            </div>
         </div>
-    </main>
+    </section>
 </Layout>
