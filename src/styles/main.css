@@ -35,7 +35,7 @@ html {
 }
 
 .navbar.scrolled {
-    background: color-mix(in oklch, var(--surface-base) 72%, transparent);
+    background: color-mix(in oklch, var(--website-navbar-bg) 72%, transparent);
     backdrop-filter: blur(var(--blur-sm)) var(--vibrancy);
     -webkit-backdrop-filter: blur(var(--blur-sm)) var(--vibrancy);
     border-bottom-color: var(--border-on-base-hairline);
@@ -127,7 +127,7 @@ body:has(.website-hero--dark) .navbar:not(.scrolled) .nav-logo-alt {
     block-size: var(--viewport-block-d);
     overflow: hidden;
     isolation: isolate;
-    background: var(--color-black, #000);
+    background: var(--color-black);
 }
 
 .zoom-media,
@@ -153,13 +153,13 @@ body:has(.website-hero--dark) .navbar:not(.scrolled) .nav-logo-alt {
 
 .zoom-cover,
 .zoom-veil-rect {
-    fill: #fff;
+    fill: var(--website-bg-light);
 }
 
 .zoom-word-text {
-    fill: #000;
+    fill: var(--color-black);
     font-family: var(--font-sans);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-stat);
     letter-spacing: -0.03em;
     text-anchor: middle;
     dominant-baseline: central;
