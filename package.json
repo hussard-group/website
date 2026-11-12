@@ -1,5 +1,7 @@
 {
     "name": "hussard-website",
+    "private": true,
+    "license": "LicenseRef-Proprietary",
     "type": "module",
     "version": "0.1.0",
     "scripts": {
