@@ -14,13 +14,13 @@
     },
     "dependencies": {
         "@sinstry-research/design": "link:../sinstry-research/design",
-        "astro": "^7.4.7",
-        "gsap": "^3.15.0"
+        "astro": "^7.4.12",
+        "gsap": "^3.15.1"
     },
     "devDependencies": {
-        "@biomejs/biome": "2.6.5",
+        "@biomejs/biome": "2.6.8",
         "@sinstry-research/shared-ts": "link:../sinstry-research/shared-ts",
-        "jsdom": "^31.0.0",
+        "jsdom": "^31.0.1",
         "vitest": "^5.1.0"
     },
     "packageManager": "bun@1.4.4"
