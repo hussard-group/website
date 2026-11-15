@@ -175,6 +175,10 @@ body:has(.website-hero--dark) .navbar:not(.scrolled) .nav-logo-alt {
     --website-footer-bg: var(--website-bg-light);
 }
 
+.website-footer .bottom {
+    padding-inline: min(var(--space-28), var(--container-padding-x));
+}
+
 /* ===== Legal pages ===== */
 .legal-prose {
     margin-inline: 0;
