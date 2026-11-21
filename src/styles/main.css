@@ -24,9 +24,9 @@ html {
     position: fixed;
     inset: 0 0 auto;
     z-index: var(--z-index-chrome-sticky);
-    padding-inline: max(var(--navbar-edge-inset, var(--space-8)), env(safe-area-inset-left, 0));
-    padding-block: max(var(--navbar-edge-inset, var(--space-8)), env(safe-area-inset-top, 0))
-        var(--navbar-edge-inset, var(--space-8));
+    padding-inline: max(var(--website-navbar-edge-inset, var(--space-8)), env(safe-area-inset-left, 0));
+    padding-block: max(var(--website-navbar-edge-inset, var(--space-8)), env(safe-area-inset-top, 0))
+        var(--website-navbar-edge-inset, var(--space-8));
     transition:
         background 0.5s var(--ease-out),
         backdrop-filter 0.5s var(--ease-out),
@@ -50,7 +50,7 @@ html {
 
 .nav-logo {
     display: block;
-    block-size: calc(var(--navbar-logo-height) * 2);
+    block-size: calc(var(--website-navbar-logo-height) * 2);
     inline-size: auto;
     transition: opacity 0.5s var(--ease-out);
 }
@@ -170,11 +170,6 @@ body:has(.website-hero--dark) .navbar:not(.scrolled) .nav-logo-alt {
 }
 
 /* ===== Footer params ===== */
-.website-footer {
-    --website-footer-bottom-border: none;
-    --website-footer-bg: var(--website-bg-light);
-}
-
 .website-footer .bottom {
     padding-inline: min(var(--space-28), var(--container-padding-x));
 }
